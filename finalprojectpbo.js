@@ -34,6 +34,46 @@ class Map {
 
     }
   }
+//Class Entity
+class Entity{
+    Constructor(height, width, x,y){
+        this.width= width;
+        this.height=height;
+        this.x=x;
+        this.y=y;     
+    }
+    //Method untuk menyerang
+    attack(){
+    }
+    //Method untuk nergerak ke kanan
+    moveRight(){
+    }
+    //Method untuk bergerak ke kiri
+    moveLeft()[
+    }
+    //Method untuk bergerak ke bawah
+    moveDown(){
+    }
+    //Method untuk bergerak ke atas
+    moveUp(){
+    }        
+}
+ 
+  //Class Monster
+  class Monster extends Entity{
+    constructor(life, color,effect,type){
+        this.life=life;
+        this.color=color;
+        this.effect=effect;
+        this.type=type;
+    }
+    //Methode untuk bergerak acak
+     moveRandom(){
+     }
+    //Method untuk menyimpan skor
+      saveScore(){
+      }   
+  }     
 
  // Class Hero
   class Hero {
