@@ -76,7 +76,7 @@ class Entity{
   }     
 
  // Class Hero
-  class Hero {
+  class Hero extends Entity {
     constructor(life, score) {
       this.life = life;
       this.score = score;
