@@ -34,3 +34,26 @@ class Map {
 
     }
   }
+
+ // Class Hero
+  class Hero {
+    constructor(life, score) {
+      this.life = life;
+      this.score = score;
+    }
+  
+    // Method untuk penambahan skor
+    increaseScore() {
+
+    }
+
+    // Method untuk menghitung darah
+    calculateLife(){
+
+    }
+
+    // Method untuk menyimpan skor
+    saveScore(){
+
+    }
+  }
