@@ -14,3 +14,23 @@ class Map {
 
     }
   }
+
+// Class Level
+  class Level {
+
+    constructor(currentLevel, latestLevel, maxLevel) {
+      this.currentLevel = currentLevel;
+      this.latestLevel = latestLevel;
+      this.maxLevel = maxLevel;
+    }
+  
+    // Method untuk menentukan level
+    setLevel() {
+      
+    }
+  
+    // Method untuk 
+    getCurrentLevel() {  
+
+    }
+  }
