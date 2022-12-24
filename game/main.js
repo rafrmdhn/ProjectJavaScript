@@ -91,3 +91,96 @@ class Entity{
     moveRight(){ 
         if(this.x < 600){    
             this.x += 5;
+// Method untuk menyimpan skor
+    saveScore(){
+
+    }
+}
+
+//Class Monster
+class Monster extends Entity{
+    constructor(x, y, width, height){
+        super(x, y, width, height);
+        this.life = 0;
+        this.color = 0;
+        this.effect = 0;
+        this.type = random(0,3);
+    }
+
+    // Memunculkan Monster dengan bentuk kotak dan 3 tipe warna berbeda
+    show(){ 
+        stroke(0);
+        if(this.type > 2){
+            fill('#ff0');
+            rect(this.x, this.y, this.width, this.height);
+            noFill()
+        }else if(this.type > 1 ){
+            fill('#f00')
+            rect(this.x, this.y, this.width, this.height);
+            noFill()
+        }else{
+            this.color = 1;
+            fill('#0f0')
+            rect(this.x, this.y, this.width, this.height);
+            noFill()
+        }
+    }
+
+    //Methode untuk bergerak acak
+    moveRandoom(){
+
+    }
+
+    //Method untuk menyimpan skor
+    saveScore(){
+
+    }
+
+}
+
+// Class Map
+class Map{
+    constructor(width, height){
+        this.width = width;
+        this.height = height;
+        this.monsters = [
+            new Monster(50, 50, 50, 50),
+            new Monster(150, 50, 50, 50),
+            new Monster(250, 50, 50, 50),
+            new Monster(350, 50, 50, 50),
+            new Monster(450, 50, 50, 50),
+            new Monster(50, 150, 50, 50),
+            new Monster(150, 150, 50, 50),
+            new Monster(250,150, 50, 50),
+            new Monster(350,150, 50, 50),
+            new Monster(450,150, 50, 50),
+        ];
+    }
+    
+    init(){
+        createCanvas(this.width, this.height);
+    }
+
+    move(){
+
+    }
+}
+
+// Class Level
+class Level{
+    constructor(currentLevel, latestLevel, maxLevel){
+        this.currentLevel = currentLevel;
+        this.latestLevel = latestLevel;
+        this.maxLevel = maxLevel;
+    }
+
+    // Method untuk menentukan level
+    setLevel() {
+
+    }
+
+    // Method untuk 
+    getCurrentLevel() {  
+
+    }
+}
