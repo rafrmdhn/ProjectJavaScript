@@ -91,7 +91,7 @@ class Entity{
     moveRight(){ 
         if(this.x < 600){    
             this.x += 5;
-// Method untuk menyimpan skor
+    // Method untuk menyimpan skor
     saveScore(){
 
     }
