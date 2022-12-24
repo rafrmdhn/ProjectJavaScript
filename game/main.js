@@ -91,6 +91,99 @@ class Entity{
     moveRight(){ 
         if(this.x < 600){    
             this.x += 5;
+          }
+    }
+    
+    //Method untuk bergerak ke kiri
+    moveLeft(){ 
+        if(this.x > 0){
+            this.x -= 5;
+        }
+    }
+    
+    //Method untuk bergerak ke bawah
+    moveDown(){ 
+        if(this.y < 600){
+            this.y += 5;
+        }
+    }
+
+    //Method untuk bergerak ke atas
+    moveUp(){ 
+        if(this.y > 0){
+            this.y -= 5;
+        }
+    }
+}
+
+// Fungsi menekan Spasi Untuk menembak peluru dan start
+function keyPressed() {
+    if (keyCode === 32) { 
+        hero.attack();
+    }
+    
+    if (keyCode === 32) {
+        layar = 1;
+        globe.init();
+    }
+}
+
+// Fungsi timer untuk durasi game
+function timer(){ 
+    if (hero.life <= 0) {
+        clearInterval(counter);   
+    } else {
+        hero.life = hero.life - 1;
+    }
+}
+
+// Class Bullet
+class Bullet{ 
+    constructor(x, y){
+        this.x = x;
+        this.y = y;
+    }
+
+    // Menampilkan bentuk peluru
+    show(){ 
+        fill('#f00');
+        ellipse(this.x, this.y, 15,  15);
+        this.y -= 5;
+        noFill();
+    }
+}
+
+// Class Hero
+class Hero extends Entity{ class 
+    constructor(x, y, width, height){
+        super(x, y, width, height);
+        this.life = 15;
+        this.score = 0;
+    }
+
+    // Method untuk menampilkan hero
+    show(){
+        stroke('#ff0');
+        rect(this.x, this.y, this.width, this.height);
+        fill('#000');
+        rect(this.x, this.y, this.width, this.height);
+    }
+
+    // Method untuk penambahan skor
+    increaseScore(){
+        this.score++;
+    }
+
+    // Method untuk mendapatkan skor
+    getScore(){
+        return this.score;
+    }
+
+    // Method untuk menghitung darah
+    calculateLife(){
+
+    }
+                          
     // Method untuk menyimpan skor
     saveScore(){
 
