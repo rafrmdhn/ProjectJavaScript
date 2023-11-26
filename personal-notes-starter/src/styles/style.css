@@ -1,0 +1,76 @@
+
+/* Gaya untuk halaman utama */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ffffff;
+  margin: 50px;
+  padding: 0;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Gaya untuk komponen SearchBar */
+input[type="text"] {
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Gaya untuk komponen AddNote */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Gaya untuk catatan */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Gaya untuk tombol Hapus dan Archive */
+button {
+  padding: 5px 10px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Gaya untuk tombol Archive */
+button.archive {
+  background-color: #0077b6;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
